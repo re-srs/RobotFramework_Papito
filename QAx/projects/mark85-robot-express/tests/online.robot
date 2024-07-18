@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation        Online
 
-Resource        ../resources/base.robot
+Resource        ../resources/base.resource
 
 Library    Browser
 
