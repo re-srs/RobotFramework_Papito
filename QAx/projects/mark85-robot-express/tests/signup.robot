@@ -3,6 +3,7 @@ Documentation        Cenários de testes do cadastro de usuários
 
 Library        FakerLibrary
 
+
 Resource        ../resources/base.resource
 
 Test Setup        Start Session
