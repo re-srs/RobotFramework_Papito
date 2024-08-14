@@ -12,10 +12,11 @@ Test Teardown     Take Screenshot
 
 *** Test Cases ***
 Deve poder cadastrar um novo usuário
+    [Tags]    cadastro_user
 
     ${user}        Create Dictionary        
-    ...    name=Renata Lobato        
-    ...    email=renata@gmail.com        
+    ...    name=Steve Jobs        
+    ...    email=jobs@apple.com        
     ...    password=123456    
 
     Remove user from database    ${user}[email]
