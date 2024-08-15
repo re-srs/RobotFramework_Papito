@@ -8,7 +8,20 @@
         },
         "task": {
             "name": "Criar uma nova versão do Ipod",
-            "tasks": ["ios", "music", "ipod"]
+            "tags": ["ios", "music", "ipod"]
+
+        }
+    },
+    "duplicate": {
+        "user": {
+            "name": "Jose Jobs",
+            "email": "jojobs@apple.com",
+            "password": "123456"
+
+        },
+        "task": {
+            "name": "Criar uma nova versão do Ipod",
+            "tags": []
 
         }
     }

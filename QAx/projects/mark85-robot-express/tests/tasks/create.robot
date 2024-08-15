@@ -5,6 +5,7 @@ Library        JSONLibrary
 
 Resource        ../../resources/base.resource
 
+
 Test Setup        Start Session
 Test Teardown     Take Screenshot
 
@@ -22,8 +23,29 @@ Deve poder cadastrar uma nova tarefa
     User should be logged in    ${data}[user][name]
 
     Go to task form
-    Submit task form        ${data}[task]
+    Submit task form             ${data}[task]
+    Task should be registered    ${data}[task][name]
 
     Sleep    5
 
     Log    ${data}
+
+Não deve poder cadastrar uma tarefa duplicada
+    [Tags]    dup
+
+     ${data}    Get fixture    tasks    duplicate
+
+    Clean user from database    ${data}[user][email]
+    Insert user from database    ${data}[user]
+
+
+    Submit login form           ${data}[user]
+    User should be logged in    ${data}[user][name]
+
+    Go to task form
+    Submit task form             ${data}[task]
+
+    Go to task form
+    Submit task form             ${data}[task]
+
+    Notice should be             Oops! Tarefa duplicada.
