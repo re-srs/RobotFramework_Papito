@@ -38,12 +38,11 @@ Não deve poder cadastrar uma tarefa duplicada
     Clean user from database    ${data}[user][email]
     Insert user from database    ${data}[user]
 
+    POST user session      ${data}[user]
+    POST a new task        ${data}[task]
 
     Submit login form           ${data}[user]
     User should be logged in    ${data}[user][name]
-
-    Go to task form
-    Submit task form             ${data}[task]
 
     Go to task form
     Submit task form             ${data}[task]
