@@ -10,14 +10,11 @@ Test Teardown       Take Screenshot
 Deve poder marcar uma tarefa como concluída
     ${data}    Get fixture    tasks    done    
 
-    Clean user from database     ${data}[user][email]
-    Insert user from database    ${data}[user]
+    Reset user from database    ${data}[user]
 
-    POST user session            ${data}[user]
-    POST a new task              ${data}[task]
+    Create a new task from API    ${data}
 
-    Submit login form            ${data}[user]
-    User should be logged in     ${data}[user][name]
+    Do login    ${data}[user]
 
     Mark task as completed       ${data}[task][name]
 
