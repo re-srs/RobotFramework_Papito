@@ -19,7 +19,7 @@ Resource        services.resource
 *** Keywords ***
 
 Start Session
-    New Browser      browser=chromium    headless=False
+    New Browser      browser=${BROWSER}    headless=False
     New Page         ${BASE_URL}
 
 #HElpers

@@ -12,6 +12,7 @@ Test Teardown     Take Screenshot
 *** Test Cases ***
 
 Deve poder cadastrar uma nova tarefa
+    [Tags]        critical
 
     ${data}    Get fixture    tasks    create
 
