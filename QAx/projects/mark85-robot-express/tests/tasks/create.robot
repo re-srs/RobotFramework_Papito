@@ -48,3 +48,19 @@ Não deve poder cadastrar uma tarefa duplicada
     Submit task form             ${data}[task]
 
     Notice should be             Oops! Tarefa duplicada.
+
+Não deve poder cadastrar uma nova tarefa quando atinge o limite de tags
+    [Tags]    tags_limit
+
+     ${data}    Get fixture    tasks    tags_limit
+
+    Clean user from database    ${data}[user][email]
+    Insert user from database    ${data}[user]
+
+    Submit login form           ${data}[user]
+    User should be logged in    ${data}[user][name]
+
+    Go to task form
+    Submit task form             ${data}[task]
+
+    Notice should be             Oops! Limite de tags atingido.

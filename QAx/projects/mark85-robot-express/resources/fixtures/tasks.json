@@ -24,6 +24,47 @@
             "tags": []
 
         }
+    },
+    "tags_limit": {
+        "user": {
+            "name": "Josefina Mars",
+            "email": "josefina@gmail.com",
+            "password": "123456"
+
+        },
+        "task": {
+            "name": "Estudar Python",
+            "tags": ["estudar" , "python" , "programação" , "pip"]
+
+        }
+    },
+
+    "done": {
+        "user": {
+            "name": "Tony Halk",
+            "email": "tony@gmail.com",
+            "password": "123456"
+
+        },
+        "task": {
+            "name": "Criar uma nova IA",
+            "tags": ["jarvis" , "ultron" , "ark"]
+
+        }
+    },
+
+    "delete": {
+        "user": {
+            "name": "Hank Pie",
+            "email": "hank@gmail.com",
+            "password": "123456"
+
+        },
+        "task": {
+            "name": "Criar a IA do Ultron",
+            "tags": ["ia" , "ultron"]
+
+        }
     }
 
 }
